@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fb;
+            color: #222;
+        }
+
+        h1 {
+            color: #000000;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #0000009a;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto 30px auto;
+            padding: 10px 24px;
+            background: #00d8ff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #009ec3;
+        }
+
+        ol {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        li {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            margin-bottom: 24px;
+            padding: 20px 24px;
+            text-align: center;
+            list-style: none;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .react {
+            color: #42b883;
+        }
+
+        .vue {
+            color: #42b883;
+        }
+
+        .angular {
+            color: #42b883;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Selamat Datang Di Portofolio Saya</h1>
+    <button onclick="showName()">Click Me</button>
+    <ol>
+        <li>
+            <h2 class="react">React.js</h2>
+            <p>Kegunaan : <br>React dipakai untuk membangun UI (User Interface) yang interaktif berbasis component.
+                Dengan React, developer bisa membuat tampilan web atau aplikasi yang cepat, dinamis, dan mudah dikelola.
+                React juga mendukung virtual DOM sehingga performa lebih efisien saat terjadi perubahan data.
+            </p>
+        </li>
+        <li>
+            <h2 class="vue">Vue.js</h2>
+            <p>Kegunaan : <br>Vue.js adalah framework JavaScript progresif yang digunakan untuk membangun antarmuka
+                pengguna (UI) dan aplikasi web satu halaman (SPA).
+                Vue dirancang agar mudah diintegrasikan ke dalam proyek yang sudah ada dan sangat fleksibel.
+                Ini menawarkan pendekatan berbasis komponen yang reaktif dan efisien untuk pengembangan UI.</p>
+        </li>
+        <li>
+            <h2 class="angular">Angular</h2>
+            <p>Kegunaan : <br>Angular adalah framework JavaScript open-source yang dikelola oleh Google.
+                Ini digunakan untuk membangun aplikasi web satu halaman (SPA) yang kompleks dan dinamis.
+                Angular menyediakan struktur yang kuat dan alat yang lengkap untuk pengembangan aplikasi skala besar.
+            </p>
+        </li>
+    </ol>
+    <script>
+        let nama = "Lexy Evandra Putra Anggara"
+
+        function showName() {
+            alert("Halo, saya " + nama + "! Selamat datang di portofolio saya")
+        }
+    </script>
+</body>
+
+</html>
