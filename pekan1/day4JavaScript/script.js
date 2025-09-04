@@ -301,3 +301,39 @@ console.log(gabungString("Hello", "World"));
 console.log(angkaTerbesar(10, 5));
 console.log(luasLingkaran(7));
 console.log(gajiBersih(5000000, 500000));
+
+
+// TUGAS KITAB SAKTI
+//  1. Hitung Luas Persegi
+function luasPersegi(sisi1, sisi2) {
+  return sisi1 * sisi2;
+}
+
+console.log(luasPersegi(2, 3));
+
+// 2. Penumlahan 3 Angka
+function penjumlahan(angka1, angka2, angka3) {
+  return angka1 + angka2 + angka3;
+}
+
+console.log(penjumlahan(1, 2, 3));
+
+//  3. Cek Ganjil Genap
+function isEven(angka) {
+  if (angka % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isEven(2));
+
+// 4. konversi Celcius Ke Fahrenheit
+function konversiSuhu(celcius) {
+  let fahrenheit = (celcius * 9) / 5 + 32;
+  return fahrenheit;
+}
+
+console.log(konversiSuhu(1));
+
