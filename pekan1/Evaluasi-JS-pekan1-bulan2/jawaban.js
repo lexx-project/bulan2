@@ -497,19 +497,15 @@ function cekWaktuGaransi(waktuService) {
 console.log(cekWaktuGaransi(8));
 
 // SOAL 20
-function hitungKomisiMekanik(jamService) {
+function hitungKomisiMekanik(jamService, jenisService) {
   let komisi = 0;
   let biayaPerJam = 25000;
   let biayaService = jamService * biayaPerJam;
-  let jenisService = "";
-  if (jamService <= 2) {
-    jenisService = "ringan";
+  if (jenisService === "ringan") {
     komisi = biayaService * 0.1;
-  } else if (jamService <= 4) {
-    jenisService = "sedang";
+  } else if (jenisService === "sedang") {
     komisi = biayaService * 0.15;
-  } else if (jamService >= 8) {
-    jenisService = "berat";
+  } else if (jenisService === "berat") {
     komisi = biayaService * 0.2;
   }
   return (
@@ -522,7 +518,7 @@ function hitungKomisiMekanik(jamService) {
   );
 }
 
-console.log(hitungKomisiMekanik(2));
+console.log(hitungKomisiMekanik(2, "berat"));
 // SOAL 21
 let paketHarga = {
   basic: 500000,
@@ -628,4 +624,28 @@ for (let i = 0; i < 110; i++) {
   console.log(alokasiSiswaKeRuangan("Siswa " + i));
 } // looping untuk data dummy karena lama nambahin 1 per satu :v
 
-// JAWABAN SAYA INI SAYA BUAT SENDIRI DENGAN BANTUAN AI HANYA SEKITAR 15% UNTUK MEMBUAT DATA YANG BANYAK ATAU MENJELASKAN KONSEP YANG SAYA BELUM PAHAM ATAU LUPA, JIKA MENEMUKAN BAGIAN YANG DI SITU BELUM PERNAH DI AJARKAN, ITU SAYA TAHU KARENA SAYA SUDAH EKSPLORE SEDIKIT TENTANG JS DAN SEBAGIAN BROWSING METHOD NYA ATAU CARA CARA NYA, BUKAN FULL AI
+// SOAL 24
+
+function hitungPersentaseKehadiran(absensiArray) {
+  let hasil = {};
+  for (let i = 0; i < absensiArray.length; i++) {
+    let nama = absensiArray[i].nama;
+    let dataAbsensi = absensiArray[i].absensi;
+    let totalPertemuan = 0;
+    let totalHadir = 0;
+    for (let j = 0; j < dataAbsensi.length; j++) {
+      totalPertemuan++;
+      if (dataAbsensi[j] === 1) {
+        totalHadir++;
+      }
+    }
+    let persentase = (totalHadir / totalPertemuan) * 100;
+    hasil[nama] = persentase + "%";
+  }
+  return hasil;
+}
+
+console.log(
+  "Persentase Kehadiran Siswa:",
+  hitungPersentaseKehadiran([{ nama: "Alice", absensi: [1, 1, 1, 0, 1] }])
+);
