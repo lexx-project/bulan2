@@ -1,0 +1,12 @@
+[
+  { "id": 1, "username": "Budi01Gaming", "email": "budi@example.com" },
+  { "id": 2, "username": "hartono", "email": "hartononiboss@example.com" },
+  { "id": 3, "username": "siti", "email": "siti@example.com" },
+  { "id": 4, "username": "agus", "email": "agus@example.com" },
+  { "id": 5, "username": "dewi", "email": "dewi@example.com" },
+  { "id": 6, "username": "joko", "email": "joko@example.com" },
+  { "id": 7, "username": "ani", "email": "ani@example.com" },
+  { "id": 8, "username": "tono", "email": "tono@example.com" },
+  { "id": 9, "username": "maya", "email": "maya@example.com" },
+  { "id": 10, "username": "rudi", "email": "rudi@example.com" }
+]
