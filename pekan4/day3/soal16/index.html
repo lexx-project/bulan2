@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Masukkan Biodata</h2>
+    <form action="">
+        <p>Nama: <input type="text" id="nama"></p>
+        <p>Umur: <input type="number" name="" id="umur"></p>
+        <p>Email: <input type="email" name="" id="email"></p>
+        <button id="submitBtn">Kirim</button>
+    </form>
+    <div id="biodataOutput"></div>
+    <script>
+        const name = document.getElementById("nama")
+        const age = document.getElementById("umur")
+        const email = document.getElementById("email")
+        const submitBtn = document.getElementById("submitBtn")
+        const biodataOutput = document.getElementById("biodataOutput")
+
+        submitBtn.addEventListener("click", (e) => {
+            e.preventDefault()
+            localStorage.setItem("name", name.value)
+            localStorage.setItem("age", age.value)
+            localStorage.setItem("email", email.value)
+            alert("Data berhasil disimpan!");
+        })
+
+        window.onload = () => {
+            const name = localStorage.getItem("name")
+            const age = localStorage.getItem("age")
+            const email = localStorage.getItem("email")
+
+            biodataOutput.innerHTML = `
+                <h2> Biodata:</h2>
+                <p>Nama: ${name}</p>
+                <p>Umur: ${age}</p>
+                <p>Email: ${email}</p>
+                </h2>
+                `
+        }
+    </script>
+</body>
+
+</html>

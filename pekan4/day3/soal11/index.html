@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="dark">LEGAM</button>
+    <button id="light">KILAU</button>
+
+    <script>
+        const darkBtn = document.getElementById("dark")
+        const lightBtn = document.getElementById("light")
+
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.style.backgroundColor = "black"
+            } else {
+                document.body.style.backgroundColor = "white"
+            }
+        })
+
+        darkBtn.addEventListener("click", () => {
+            document.body.style.backgroundColor = "black"
+            localStorage.setItem("theme", "dark")
+        })
+
+        lightBtn.addEventListener("click", () => {
+            document.body.style.backgroundColor = "white"
+            localStorage.setItem("theme", "light")
+        })
+
+        console.log(localStorage.getItem("theme"))
+
+    </script>
+
+</body>
+
+</html>

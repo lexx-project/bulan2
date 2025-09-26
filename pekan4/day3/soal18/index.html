@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Register Username</h2>
+    <form id="registerForm">
+        <input type="text" name="" id="username" placeholder="Masukkan username" required>
+        <button id="submit">Submit</button>
+    </form>
+    <form action="" id="changeName">
+        <input type="text" name="" id="searchName" placeholder="Masukkan Nama Yang Mau Di Ubah">
+        <input type="text" name="" id="newName" placeholder="Masukkan Nama Baru">
+        <button id="change">Change</button>
+    </form>
+    <script>
+        function addUsername() {
+            const registerForm = document.getElementById("registerForm");
+            const usernameInput = document.getElementById("username")
+
+            registerForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                if (localStorage.getItem("username")) {
+                    alert("Username sudah terdaftar!");
+                } else {
+                    localStorage.setItem("username", usernameInput.value);
+                    alert("Registrasi berhasil!");
+                }
+            })
+        }
+
+        function changeName() {
+            const changeNameForm = document.getElementById("changeName")
+            const searchNameInput = document.getElementById("searchName")
+            const newNameInput = document.getElementById("newName")
+
+            changeNameForm.addEventListener("submit", (e) => {
+                e.preventDefault()
+                if (searchNameInput.value === localStorage.getItem("username")) {
+                    localStorage.setItem("username", newNameInput.value)
+                    alert("Nama berhasil diubah!")
+                } else {
+                    alert("Nama Tidak Di temukan")
+                }
+            })
+        }
+
+        addUsername();
+        changeName();
+    </script>
+</body>
+
+</html>

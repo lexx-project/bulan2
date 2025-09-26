@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Hapus Data</h2>
+    <button id="removeData">Hapus</button>
+    <script>
+        const btn = document.getElementById('removeData');
+
+        btn.addEventListener("click", () => {
+            localStorage.removeItem("password")
+            localStorage.removeItem("username")
+            alert("Data Berhasil Dihapus")
+        })
+
+        console.log(localStorage.getItem("username"), localStorage.getItem("password"));
+
+    </script>
+</body>
+
+</html>

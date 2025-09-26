@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Masukkan Usia</p>
+    <input type="number" name="" id="inputAge">
+    <button id="btn">Submit</button>
+
+    <script>
+        const inputAge = document.getElementById("inputAge")
+        const btn = document.getElementById("btn")
+
+        btn.addEventListener("click", () => {
+            if (inputAge.value < 18) {
+                alert("Anda belum cukup umur")
+            } else {
+                alert("Selamat datang")
+            }
+        })
+
+    </script>
+
+
+</body>
+
+</html>

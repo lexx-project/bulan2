@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>SETUJU DPR BUBAR?</p>
+    <input type="checkbox" name="" id="setuju">
+    <button id="submit">Submit</button>
+
+    <script>
+        const setuju = document.getElementById('setuju');
+        const submit = document.getElementById('submit');
+        submit.addEventListener('click', () => {
+
+            if (!setuju.checked) {
+                alert('HARUS SETUJU!!!');
+            } else {
+                alert('MANTAP');
+            }
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>SELAMAT DATANG</p>
+    <input type="text" name="" id="username">
+    <input type="password" name="" id="pw">
+    <button id="submitBtn">submit</button>
+
+    <script>
+        const username = document.getElementById('username');
+        const pw = document.getElementById('pw');
+        const submitBtn = document.getElementById('submitBtn');
+
+        submitBtn.addEventListener('click', function () {
+            const u = username.value;
+            const p = pw.value;
+
+            if (!u || !p) {
+                alert("Isi semua field");
+            } else {
+                if (u === 'serverPdn' && p === 'admin123') {
+                    alert('Login berhasil!');
+                } else {
+                    alert('Username Atau Password Salah');
+                }
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Masukkan Tanggal: </p>
+    <input type="date" id="dateInput">
+    <button id="btnConfirmDate">Submit</button>
+
+    <script>
+        const dateInput = document.getElementById("dateInput")
+        const btnConfirmDate = document.getElementById("btnConfirmDate")
+
+        btnConfirmDate.addEventListener("click", () => {
+            if (dateInput.value === "") {
+                alert("Tanggal Tidak Boleh Kosong")
+            } else if (new Date(dateInput.value) > new Date()) {
+                alert("Tanggal Tidak Boleh Lewat Dari Hari Ini")
+            } else {
+                alert("Tanggal Valid")
+            }
+        })
+    </script>
+</body>
+
+</html>

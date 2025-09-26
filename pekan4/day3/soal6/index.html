@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Masukkan Username</p>
+    <form action="">
+        <input type="text" name="" id="inputUser" placeholder="Masukkan Nama">
+        <button id="btn">Submit</button>
+    </form>
+
+
+    <script>
+        const username = document.getElementById("inputUser")
+        const btn = document.getElementById("btn")
+
+        btn.addEventListener("click", () => {
+            localStorage.setItem("username", username.value)
+            alert("User Telah Di Simpan")
+
+        })
+    </script>
+</body>
+
+</html>

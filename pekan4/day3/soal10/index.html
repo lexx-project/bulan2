@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Counter Number</h2>
+
+    <button id="add">Tambah</button>
+    <button id="reduce">Kurang</button>
+    <p id="hasil"></p>
+
+    <script>
+        const addBtn = document.getElementById('add');
+        const reduceButton = document.getElementById('reduce')
+        const result = document.getElementById('hasil')
+        let count = 0
+
+        reduceButton.addEventListener("click", () => {
+            count--
+            result.innerHTML = count
+        })
+
+        addBtn.addEventListener("click", () => {
+            count++
+            result.innerHTML = count
+            localStorage.setItem('counter', count)
+        })
+
+        if (true) {
+            count = localStorage.getItem('counter');
+            result.innerHTML = count;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

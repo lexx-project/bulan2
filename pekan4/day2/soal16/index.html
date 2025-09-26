@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Masukkan Nama</p>
+    <input type="text" name="" id="inputName">
+    <button id="btn">Submit</button>
+
+    <script>
+        const inputName = document.getElementById("inputName")
+        const btn = document.getElementById("btn")
+
+        btn.addEventListener("click", () => {
+            if (!inputName.value) {
+                alert("Nama tidak boleh kosong")
+            } else {
+                alert(`Nama anda adalah ${inputName.value}`)
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

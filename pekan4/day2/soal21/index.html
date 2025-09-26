@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Masukkan Password: </p>
+    <input type="password" id="password">
+    <p>Confirm Password: </p>
+    <input type="password" id="confirmPassword">
+    <button id="btnConfirm">Submit</button>
+
+    <script>
+        const inputPw = document.getElementById("password")
+        const inputConfirmPw = document.getElementById("confirmPassword")
+        const btnConfirm = document.getElementById("btnConfirm")
+        btnConfirm.addEventListener("click", () => {
+            if (inputPw.value === "") {
+                alert("Password Tidak Boleh Kosong")
+            } else if (inputPw.value === inputConfirmPw.value) {
+                alert("Selamat Datang")
+            } else {
+                alert("Password Tidak Sesuai")
+            }
+
+        })
+    </script>
+</body>
+
+
+</html>

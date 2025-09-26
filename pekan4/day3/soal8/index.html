@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            width: 50vh;
+            height: 70vh;
+            text-align: center;
+        }
+
+        button {
+            background-color: aqua;
+            width: 100px;
+            height: 40px;
+            border: transparent;
+            border-radius: 2px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: rgb(37, 177, 177);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <form action="">
+            <h2>Login</h2>
+            <p>Username</p>
+            <input type="text" name="" id="usnInput" placeholder="Masukkan Username">
+            <p>Password</p>
+            <input type="password" name="" id="pwInput" placeholder="Masukkan Password">
+            <br>
+            <button id="loginButton">Login</button></p>
+        </form>
+    </div>
+    <script>
+        const username = document.getElementById("usnInput");
+        const password = document.getElementById("pwInput");
+        const button = document.getElementById("loginButton");
+        const form = document.querySelector(".login");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            localStorage.setItem("username", username.value);
+            localStorage.setItem("password", password.value);
+            alert("Data Berhasil Di Simpan")
+        })
+
+        console.log(localStorage.getItem("username"), localStorage.getItem("password"));
+    </script>
+</body>
+
+</html>

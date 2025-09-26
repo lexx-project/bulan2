@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Masukkan Email</p>
+    <input type="email" name="" id="inputEmail">
+    <button id="submitEmail">Submit</button>
+
+    <script>
+        const inputEmail = document.getElementById("inputEmail")
+        const btnSubmitEmail = document.getElementById("submitEmail")
+        const emailRegex = /^[\w.-]+@[\w.-]+\.\w{2,}$/
+
+        btnSubmitEmail.addEventListener("click", () => {
+            if (emailRegex.test(inputEmail.value)) {
+                alert("Email valid")
+            } else {
+                alert("Email tidak valid")
+            }
+        })
+    </script>
+
+</body>
+
+
+</html>

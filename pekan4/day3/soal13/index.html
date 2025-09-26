@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Keranjang Belanjaan</h2>
+    <input type="text" name="" id="inputProduk" placeholder="Masukkan nama produk">
+    <button id="addProduk">Tambah Produk</button>
+
+    <button id="showProduk">Lihat Produk</button>
+    <ul id="listProduk"></ul>
+    <button id="clearAll">Hapus Semua</button>
+    <script>
+        const inputProduk = document.getElementById('inputProduk');
+        const addProdukBtn = document.getElementById("addProduk")
+        const showProdukBtn = document.getElementById("showProduk")
+        const clearAllBtn = document.getElementById("clearAll")
+
+        let produk = [];
+        addProdukBtn.addEventListener("click", () => {
+            produk.push(inputProduk.value)
+            localStorage.setItem("nameProduk", JSON.stringify(produk))
+        })
+
+
+        showProdukBtn.addEventListener("click", () => {
+            const listProduk = document.getElementById("listProduk")
+            listProduk.innerHTML = ""
+
+            const dataProduk = JSON.parse(localStorage.getItem("nameProduk"))
+            dataProduk.forEach((item) => {
+                const li = document.createElement("li")
+                li.textContent = item
+                listProduk.appendChild(li)
+            })
+        })
+
+        clearAllBtn.addEventListener("click", () => {
+            localStorage.clear()
+            produk = []
+            const listProduk = document.getElementById("listProduk")
+            listProduk.innerHTML = ""
+        })
+
+    </script>
+</body>
+
+</html>
